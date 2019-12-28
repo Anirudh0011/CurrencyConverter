@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
         Log.i("info","Button Pressed");
         EditText editText=(EditText) findViewById(R.id.e1);
 
-        String amountinDollars = editText.getText().toString();
-        double amountinDollarDouble = Double.parseDouble(amountinDollars);
-        double amountinRupeesDouble = amountinDollarDouble * 0.014;
+        String amountinRupees = editText.getText().toString();
+        double amountinRupeesDouble = Double.parseDouble(amountinRupees);
+        double amountinDollarDouble = amountinRupeesDouble * 0.014;
 
-        String amountinRupeesString = String.format("%.2f", amountinRupeesDouble);
-        Toast.makeText(this, "₹" + amountinDollars +" is $ " + amountinRupeesString, Toast.LENGTH_SHORT).show();
+        String amountinRupeesString = String.format("%.2f", amountinDollarDouble);
+        Toast.makeText(this, "₹" + amountinRupees +" is $ " + amountinRupeesString, Toast.LENGTH_SHORT).show();
     }
 
     @Override
